@@ -5,6 +5,9 @@ USERNAME_ORG=$1
 PASSWORD_ACT_KEY="$2"
 POOL_ID=$3
 
+#disable SELinux
+setenforce 0
+
 # Remove RHUI
 
 rm -f /etc/yum.repos.d/rh-cloud.repo
