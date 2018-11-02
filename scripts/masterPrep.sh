@@ -92,9 +92,9 @@ yum -y remove ansible
 yum -y install https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.6.2-1.el7.ans.noarch.rpm
 
 mkdir /usr/share/ansible/openshift-ansible
-chmod 777 /usr/share/ansible/openshift-ansible
+chmod -R 777 /usr/share/ansible/openshift-ansible
 cp -R /home/ocpadmin/openshift-ansible/* /usr/share/ansible/openshift-ansible
-chmod 777 /usr/share/ansible/openshift-ansible
+chmod -R 777 /usr/share/ansible/openshift-ansible
 
 # Install Docker 1.12.x
 echo $(date) " - Installing Docker 1.12.x"
