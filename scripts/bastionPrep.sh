@@ -74,6 +74,12 @@ echo $(date) " - Installing OpenShift utilities"
 
 yum -y install atomic-openshift-utils
 
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sed -i -e "s/^enabled=1/enabled=0/" /etc/yum.repos.d/epel.repo
+yum -y remove ansible
+yum -y install https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.6.2-1.el7.ans.noarch.rpm
+
+
 # Create playbook to update ansible.cfg file to include path to library
 
 cat > updateansiblecfg.yaml <<EOF
