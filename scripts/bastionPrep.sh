@@ -84,8 +84,8 @@ yum -y install https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/an
 
 mkdir /usr/share/ansible/openshift-ansible
 chmod 777 /usr/share/ansible/openshift-ansible
-cp /home/ocpadmin/openshift-ansible/* /usr/share/ansible/openshift-ansible
-chmod -R 777 /usr/share/ansible/openshift-ansible
+cp -R /home/ocpadmin/openshift-ansible/* /usr/share/ansible/openshift-ansible
+chmod 777 /usr/share/ansible/openshift-ansible
 
 # Create playbook to update ansible.cfg file to include path to library
 
